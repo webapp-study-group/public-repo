@@ -1,8 +1,8 @@
 # WebApp 開發學習小組 (面向新手)
 
-<center>
+<div align="center">
 <img src="./logo/logo.webp" width="200">
-</center>
+</div>
 
 👋 大家好，我是 Beeno。我在全職工作中是一個 WebApp fullstack 開發課程的導師。現在我想將我的知識分享給更多的人，所以我打算在個人時間裡，教導一些有興趣學習的人。
 
