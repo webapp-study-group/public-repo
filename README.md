@@ -17,3 +17,13 @@ Youtube Playlist: https://www.youtube.com/playlist?list=PLH2rXoLSgZYd8R6LZ7nwxNz
 Github Repo: https://github.com/webapp-study-group/public-repo
 
 Facebook Event: https://www.facebook.com/events/1047846646458408
+
+## Outline
+
+### Session 1
+
+Introduction to web UI with HTML/CSS/JS
+
+### Session 1.5
+
+Using Ionic to build mobile webapp layout
