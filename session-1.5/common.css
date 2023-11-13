@@ -1,0 +1,7 @@
+[hidden] {
+  display: none;
+}
+
+ion-footer .border-top {
+  border-top: 1px solid #ccc;
+}

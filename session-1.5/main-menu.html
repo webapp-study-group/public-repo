@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Food Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item href="/sub-menu.html?type=drink">
+            <ion-icon name="beer" slot="start"></ion-icon>
+            <ion-label> Drink </ion-label>
+          </ion-item>
+          <ion-item href="/sub-menu.html?type=pizza">
+            <ion-icon name="pizza" slot="start"></ion-icon>
+            <ion-label> Pizza </ion-label>
+          </ion-item>
+          <ion-item href="/sub-menu.html?type=burger">
+            <ion-icon name="fast-food" slot="start"></ion-icon>
+            <ion-label> Burger </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-app>
+  </body>
+</html>

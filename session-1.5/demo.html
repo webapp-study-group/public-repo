@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link rel="stylesheet" href="theme.css" />
+    <style>
+      [hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Header</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-icon name="beer-outline" slot="start"></ion-icon>
+            <ion-icon name="happy-outline" slot="end"></ion-icon>
+            <ion-label class="ion-text-center"> Drink </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>username</ion-label>
+            <input type="text" />
+          </ion-item>
+          <ion-item>
+            <ion-label>username</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>email</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">username</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">username</ion-label>
+            <ion-input placeholder="only lower case"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">password</ion-label>
+            <ion-input type="password" id="passwordInput"></ion-input>
+            <ion-buttons slot="end">
+              <ion-button
+                aria-label="view password"
+                onclick="showPassword()"
+                id="showPasswordButton"
+              >
+                <ion-icon name="eye-off-outline"></ion-icon>
+              </ion-button>
+              <ion-button
+                aria-label="hide password"
+                onclick="hidePassword()"
+                hidden
+                id="hidePasswordButton"
+              >
+                <ion-icon name="eye-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <script>
+              function showPassword() {
+                passwordInput.type = 'text'
+                showPasswordButton.hidden = true
+                hidePasswordButton.hidden = false
+              }
+              function hidePassword() {
+                passwordInput.type = 'password'
+                showPasswordButton.hidden = false
+                hidePasswordButton.hidden = true
+              }
+            </script>
+          </ion-item>
+        </ion-list>
+        <ion-button>Submit</ion-button>
+        <div class="ion-text-center">
+          <ion-button>Submit</ion-button>
+        </div>
+        <ion-button expand="block">Submit</ion-button>
+        <ion-button expand="full">Submit</ion-button>
+        <ion-button expand="block">
+          <ion-icon name="cloud-upload" slot="start"></ion-icon>
+          Upload
+        </ion-button>
+        <p>line 1</p>
+        <p>line 2</p>
+        <p>line 3</p>
+        <p>line 4</p>
+        <p>line 5</p>
+        <p>line 6</p>
+        <p>line 7</p>
+        <p>line 8</p>
+        <p>line 9</p>
+        <p>line 10</p>
+        <p>line 11</p>
+        <p>line 12</p>
+        <p>line 13</p>
+        <p>line 14</p>
+        <p>line 15</p>
+        <p>line 16</p>
+      </ion-content>
+      <ion-footer>text</ion-footer>
+    </ion-app>
+  </body>
+</html>
