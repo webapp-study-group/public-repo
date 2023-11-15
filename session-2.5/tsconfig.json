@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "jsxFactory": "o",
+    "jsxFragmentFactory": "null",
+    "strict": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "target": "es2022",
+    "module": "es2022",
+    "lib": [
+      "dom",
+      "es2022",
+    ],
+    "outDir": "dist"
+  },
+  "exclude": [
+    "public",
+    "build",
+    "dist"
+  ]
+}

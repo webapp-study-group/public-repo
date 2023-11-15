@@ -1,0 +1,4 @@
+user=node
+host=session-2.5.cc
+root_dir=/home/node/workspace/github.com/beenotung/session-2.5
+pm2_name="session-2.5"

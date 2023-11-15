@@ -1,0 +1,11 @@
+# npm
+pnpm-lock.yaml
+*.json
+
+# built files
+dist/
+build/
+template/index.ts
+
+# lighthouse report
+localhost_*.report.html
