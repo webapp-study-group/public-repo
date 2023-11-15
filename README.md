@@ -42,6 +42,8 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 
 ### Session 2.5
 
+**淺嘗用 node.js 開發後台伺服器 (backend server) 和數據庫 (database)**
+
 > Fullstack development with ts-liveview, covering frontend, backend, database, and realtime updates
 
 在 session 2 的後半部份，我們會使用 ts-liveview 進行全端開發，包括前端、後端、資料庫和即時更新網頁應用程式上的內容。
