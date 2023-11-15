@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      img {
+        height: 250px;
+      }
+      div {
+        font-size: 32px;
+      }
+      button {
+        margin: 64px;
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="logo.webp" />
+    <div>ABC Restaurant</div>
+    <a href="menu.html">
+      <button>Place Order</button>
+    </a>
+    <div id="counter">loading ...</div>
+    <script type="module">
+      let res = await fetch('/counter')
+      counter.textContent = await res.text()
+    </script>
+  </body>
+</html>

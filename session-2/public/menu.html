@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        display: flex;
+        font-size: 1.5rem;
+        align-items: center;
+      }
+      header img {
+        height: 3rem;
+      }
+      header div {
+        flex-grow: 1;
+        text-align: center;
+      }
+      #foodList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .food {
+        border: 1px solid red;
+        border-radius: 1rem;
+        width: fit-content;
+        margin: 0.5rem;
+        overflow: hidden;
+      }
+      .food img {
+        width: 200px;
+        height: 200px;
+      }
+      .food-name {
+        margin: 1rem;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .food-price {
+        margin: 1rem;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo-small.webp" />
+      <div>ABC Restaurant</div>
+    </header>
+    <div id="typeList">
+      <button onclick="showMainDish()">Main Dish</button>
+      <button onclick="showDrink()">Drink</button>
+      <button onclick="showSnack()">Snack</button>
+      <button onclick="showDessert()">Dessert</button>
+    </div>
+    <div id="foodList">
+      <div class="food">
+        <img src="https://picsum.photos/seed/beef-steak/200/200" />
+        <div class="food-name">Beef Steak</div>
+        <div class="food-price">$10</div>
+      </div>
+      <div class="food">
+        <img src="https://picsum.photos/seed/beef-salad/200/200" />
+        <div class="food-name">Beef Salad</div>
+      </div>
+    </div>
+    <script>
+      let foodTemplate = foodList.querySelector('.food')
+      console.log(foodTemplate)
+
+      showMainDish()
+
+      function showMainDish() {
+        foodList.textContent = ''
+        showFood({
+          id: 1,
+          name: 'Beef Steak',
+          price: 80,
+        })
+        showFood({
+          id: 2,
+          name: 'Beef Salad',
+          price: 32,
+        })
+      }
+
+      function showDrink() {
+        foodList.textContent = ''
+        showFood({
+          id: 3,
+          name: 'Beef Blood Juice',
+          price: 18,
+        })
+        showFood({
+          id: 4,
+          name: 'Milk',
+          price: 12,
+        })
+      }
+
+      function showSnack() {
+        foodList.textContent = ''
+        showFood({
+          id: 5,
+          name: 'Beef meat stick',
+          price: 8,
+        })
+        showFood({
+          id: 6,
+          name: 'Meat ball',
+          price: 20,
+        })
+      }
+
+      function showDessert() {
+        foodList.textContent = ''
+        showFood({
+          id: 7,
+          name: 'Fresh milk ice cream',
+          price: 30,
+        })
+      }
+
+      function showFood(data) {
+        let food = foodTemplate.cloneNode(true)
+
+        food.querySelector(
+          'img',
+        ).src = `https://picsum.photos/seed/${data.id}/200/200`
+
+        food.querySelector('.food-name').textContent = data.name
+
+        food.querySelector('.food-price').textContent = '$' + data.price
+
+        foodList.appendChild(food)
+      }
+    </script>
+  </body>
+</html>
