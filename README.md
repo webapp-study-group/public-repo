@@ -33,3 +33,15 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 繼上一個 session 學過用 html 和 css 砌網頁，今次教大家用 ionic framework 這個 mobile SDK 來砌手機 webapp 界面。
 
 今次比較多示範位，可以跟住做和嘗試不同的組合 💪
+
+### Session 2
+
+> Build your first http server and express app
+
+在 session 2 的前半部，我們會學習如何建立自己的 HTTP 伺服器和使用 Express 框架來開發非常簡單(基礎)的應用程式伺服器。
+
+### Session 2.5
+
+> Fullstack development with ts-liveview, covering frontend, backend, database, and realtime updates
+
+在 session 2 的後半部份，我們會使用 ts-liveview 進行全端開發，包括前端、後端、資料庫和即時更新網頁應用程式上的內容。
