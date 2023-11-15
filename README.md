@@ -36,9 +36,9 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 
 ### Session 2
 
-> Build your first http server and express app
+> Build your own web server in node.js with http module and express package
 
-在 session 2 的前半部，我們會學習如何建立自己的 HTTP 伺服器和使用 Express 框架來開發非常簡單(基礎)的應用程式伺服器。
+在第二節的前半部份，我們會學習如何使用 Node.js 中的 http 模組和 express 套件來建立非常簡單(基礎)的網頁伺服器。
 
 ### Session 2.5
 
