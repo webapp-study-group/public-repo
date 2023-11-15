@@ -38,7 +38,7 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 
 > Build your own web server in node.js with http module and express package
 
-在第二節的前半部份，我們會學習如何使用 Node.js 中的 http 模組和 express 套件來建立非常簡單(基礎)的網頁伺服器。
+在第二節的前半部份，我們會淺嘗如何簡單使用 Node.js 中的 http 模組和 express 套件來建立基礎的網頁伺服器。
 
 ### Session 2.5
 
