@@ -24,7 +24,7 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 
 > Introduction to web UI with HTML/CSS/JS
 
-介紹用 HTML + CSS + JS 由零開始砌網頁🌱
+介紹用 HTML + CSS + JS 由零開始砌網頁 🌱
 
 ### Session 1.5
 
@@ -32,4 +32,4 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 
 繼上一個 session 學過用 html 和 css 砌網頁，今次教大家用 ionic framework 這個 mobile SDK 來砌手機 webapp 界面。
 
-今次比較多示範位，可以跟住做和嘗試不同的組合💪
+今次比較多示範位，可以跟住做和嘗試不同的組合 💪
