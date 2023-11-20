@@ -62,10 +62,9 @@ let scripts = config.development ? (
 let brand = (
   <div style="color: darkblue; font-weight: bold">
     <span style="font-size: 1.7rem" class="text-no-wrap">
-      ts-liveview
+      live-task
     </span>{' '}
     <div class="text-no-wrap">
-      <a href="https://news.ycombinator.com/item?id=22830472">HN</a>{' '}
       <a href="https://github.com/beenotung/ts-liveview">git</a>
     </div>
   </div>

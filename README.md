@@ -47,3 +47,17 @@ Facebook Event: https://www.facebook.com/events/1047846646458408
 > Fullstack development with ts-liveview, covering frontend, backend, database, and realtime updates
 
 在 session 2 的後半部份，我們會使用 ts-liveview 進行全端開發，包括前端、後端、資料庫和即時更新網頁應用程式上的內容。
+
+### Session 3
+
+> Practice fullstack development with Task Manager (Todo List)
+
+在 session 3，我們用 "待辦事項清單" (todo list) 來練習全端開發 (fullstack development)。
+
+主要 source files: [task.tsx](./session-3/server/app/pages/task.tsx)
+
+routing files: [routes.tsx](./session-3/server/app/routes.tsx)
+
+螢幕截圖:
+
+![螢幕截圖](./session-3/screenshot.webp)
