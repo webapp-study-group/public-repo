@@ -1,0 +1,99 @@
+import { Link } from '../components/router.js'
+import { o } from '../jsx/jsx.js'
+import { prerender } from '../jsx/html.js'
+import Comment from '../components/comment.js'
+import SourceCode from '../components/source-code.js'
+
+// Calling <Component/> will transform the JSX into AST for each rendering.
+// You can reuse a pre-compute AST like `let component = <Component/>`.
+
+// If the expression is static (not depending on the render Context),
+// you don't have to wrap it by a function at all.
+
+let content = (
+  <div id="home">
+    <div>
+      Quick Link: <Link href="/task">Task List</Link>
+    </div>
+    <h1>Home Page</h1>
+    <p>
+      This website is a{' '}
+      <b>
+        hybrid <abbr title="Static Side Generation">SSG</abbr> and{' '}
+        <abbr title="Server-Side Rendered">SSR</abbr> Realtime Web App
+      </b>{' '}
+      (also known as <b>SSR-SPA</b>).
+    </p>
+    <p>
+      When the browser load this url, the server responses complete html content
+      to the GET request. This allows the browser to perform meaningful paint as
+      soon as possible. And it's ideal for SEO.
+    </p>
+    <p>
+      Then the browser establishes websocket connection to receive realtime
+      update from the server.
+    </p>
+    <p>
+      The app logic is executed on the server, and the app state is kept on the
+      server. (The input values are kept in the DOM before form submission.)
+    </p>
+    <p>
+      As opposite to ts-liveview v1, the server does not maintain virtual dom
+      for diff-patch. The UI is updated using query selector and AST/JSX.
+      ts-liveview employs hybrid approach: the developer can specify the initial
+      layout declaratively and applying event-driven partial layout update. This
+      is like a crossover of <a href="https://reactjs.org/">React</a> and{' '}
+      <a href="https://jquery.com/">jQuery</a>, taking a good-side of both
+      worlds, balancing the developer experience (DX) and runtime efficient,
+      which improve the user-experience (UX).
+    </p>
+
+    <h2>ts-liveview code snippet</h2>
+    <p>You can either write in JSX or AST.</p>
+    {Comment(`using table to align 3 code blocks with the same width`)}
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <fieldset>
+              <legend>JSX Example</legend>
+              <code class="inline-code">{`<a href='#'>hash link</a>`}</code>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <fieldset>
+              <legend>AST Example</legend>
+              <code class="inline-code">{`['a', { href: '#' }, ['hash link']]`}</code>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <fieldset>
+              <legend>HTML output</legend>
+              <a href="#">hash link</a>
+            </fieldset>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Try some reactive demo:{' '}
+      <a href="https://liveviews.cc/thermostat" target="_blank">
+        Thermostat
+      </a>
+      ,{' '}
+      <a href="https://liveviews.cc/form" target="_blank">
+        Form Demo
+      </a>
+    </p>
+    <SourceCode page="home.tsx" />
+  </div>
+)
+
+// And it can be pre-rendered into html as well
+let Home = prerender(content)
+
+export default Home

@@ -1,0 +1,102 @@
+# Visualize on https://erd.surge.sh
+# or https://quick-erd.surge.sh
+#
+# Relationship Types
+#  -    - one to one
+#  -<   - one to many
+#  >-   - many to one
+#  >-<  - many to many
+#  -0   - one to zero or one
+#  0-   - zero or one to one
+#  0-0  - zero or one to zero or one
+#  -0<  - one to zero or many
+#  >0-  - zero or many to one
+#
+////////////////////////////////////
+
+
+request_log
+-----------
+id integer PK
+method_id integer FK >- method.id
+url_id integer FK >- url.id
+user_agent_id integer NULL FK >- user_agent.id
+timestamp integer
+user_id integer NULL FK >0- user.id
+
+
+method
+------
+id integer PK
+method text unique
+
+
+url
+---
+id integer PK
+url text unique
+
+
+user_agent
+----------
+id integer PK
+user_agent text unique
+count integer
+ua_type_id integer NULL FK >0- ua_type.id
+ua_bot_id integer NULL FK >0- ua_bot.id
+
+
+ua_type
+-------
+id integer PK
+name text unique
+count integer
+
+
+ua_bot
+------
+id integer PK
+name text unique
+count integer
+
+
+ua_stat
+-------
+id integer PK
+last_request_log_id integer
+
+
+user
+----
+id integer PK
+username varchar(32)
+password_hash char(60) NULL
+email varchar(320) NULL
+tel varchar(16) NULL
+avatar varchar(256) NULL
+
+
+task
+----
+id integer PK
+title text
+is_done boolean NULL
+
+
+# zoom: 1.000
+# view: (0, 0)
+# text-bg: #6495ed
+# text-color: #000000
+# diagram-bg: #f5f5f5
+# diagram-text: #000000
+# table-bg: #ffffff
+# table-text: #000000
+# request_log (74, 55)
+# method (448, 16)
+# url (450, 131)
+# user_agent (448, 243)
+# ua_type (901, 232)
+# ua_bot (901, 385)
+# ua_stat (714, 62)
+# user (75, 472)
+# task (514, 488)
