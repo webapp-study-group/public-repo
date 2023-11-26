@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    Income = <input type="number" id="income" oninput="calc()" />
+
+    Tax = <button id="tax"></button>
+    <script>
+      /* version 1, easier but repeating */
+      function calc() {
+        if (income.valueAsNumber <= 50000) {
+          tax.textContent = (income.valueAsNumber * 2) / 100
+        } else if (income.valueAsNumber <= 100000) {
+          tax.textContent =
+            (50000 * 2) / 100 + ((income.valueAsNumber - 50000) * 6) / 100
+        } else if (income.valueAsNumber <= 150000) {
+          tax.textContent =
+            (50000 * 2) / 100 +
+            (50000 * 6) / 100 +
+            ((income.valueAsNumber - 100000) * 10) / 100
+        } else {
+          tax.textContent =
+            (50000 * 2) / 100 +
+            (50000 * 6) / 100 +
+            (50000 * 10) / 100 +
+            ((income.valueAsNumber - 150000) * 14) / 100
+        }
+      }
+
+      /* version 2, less repeating using accumulated value and variable */
+      function calc() {
+        tax.textContent = (income.valueAsNumber * 2) / 100
+        if (income.valueAsNumber > 50000) {
+          let excess = income.valueAsNumber - 50000
+          tax.textContent =
+            tax.textContent - (excess * 2) / 100 + (excess * 6) / 100
+        }
+        if (income.valueAsNumber > 100000) {
+          let excess = income.valueAsNumber - 100000
+          tax.textContent =
+            tax.textContent - (excess * 6) / 100 + (excess * 10) / 100
+        }
+        if (income.valueAsNumber > 150000) {
+          let excess = income.valueAsNumber - 150000
+          tax.textContent =
+            tax.textContent - (excess * 10) / 100 + (excess * 14) / 100
+        }
+        if (income.valueAsNumber > 200000) {
+          let excess = income.valueAsNumber - 200000
+          tax.textContent =
+            tax.textContent - (excess * 14) / 100 + (excess * 17) / 100
+        }
+        if ((income.valueAsNumber * 15) / 100 < tax.textContent) {
+          tax.textContent = (income.valueAsNumber * 15) / 100
+        }
+      }
+    </script>
+  </body>
+</html>

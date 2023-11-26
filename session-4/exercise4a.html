@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .person {
+        border: 1px solid;
+        width: fit-content;
+        display: inline-block;
+        padding: 0.5rem;
+        margin: 0.25rem;
+        border-radius: 0.5rem;
+      }
+      .person:hover {
+        background-color: aqua;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="personList"></div>
+    <button class="person">Alan</button>
+    <div id="message"></div>
+    <script>
+      let person = document.querySelector('.person')
+      person.remove()
+      let users = ['Alan', 'Bob', 'Cathy', 'Daniel']
+      for (let user of users) {
+        person = person.cloneNode(true)
+        person.onclick = function () {
+          message.textContent = 'Hello ' + user
+        }
+        person.textContent = user
+        personList.appendChild(person)
+      }
+    </script>
+  </body>
+</html>

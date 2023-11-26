@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .personName {
+        border: 1px solid;
+        width: fit-content;
+        display: inline-block;
+        padding: 0.5rem;
+        margin: 0.25rem;
+        border-radius: 0.5rem;
+      }
+      .personName:hover {
+        background-color: aqua;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="personName" />
+    <input id="personBio" />
+    <button onclick="addPerson()">add</button>
+    <div id="personList"></div>
+
+    <div class="person">
+      <div class="personName"></div>
+      <button class="removeButton">Remove</button>
+    </div>
+
+    <div id="message"></div>
+    <script>
+      let personTemplate = document.querySelector('.person')
+      personTemplate.remove()
+      function addPerson() {
+        let user = { name: personName.value, bio: personBio.value }
+        let person = personTemplate.cloneNode(true)
+        person.querySelector('.personName').onclick = function () {
+          message.textContent = user.name + ': ' + user.bio
+          message.hidden = false
+        }
+        person.querySelector('.personName').textContent = user.name
+        person.querySelector('.removeButton').onclick = function () {
+          person.remove()
+          message.hidden = true
+        }
+        personList.appendChild(person)
+      }
+    </script>
+  </body>
+</html>
