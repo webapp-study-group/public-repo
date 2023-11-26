@@ -36,7 +36,7 @@ This exercise helps you revise looping array and create clickable elements for e
 
 [solution](./exercise4a.html)
 
-## Exercise 4b: Friend Book
+## Exercise 4b: Friend Book with Bio
 
 > create a bio for your friends
 
@@ -44,9 +44,9 @@ This exercise helps you revise using array of object to express more aspect of d
 
 [solution](./exercise4b.html)
 
-## Exercise 5
+## Exercise 5: Editable Friend Book
 
-> An editable friend book
+> add more new friends
 
 This exercise helps you revise collecting information from user, and creating (new) interactive elements.
 
