@@ -18,7 +18,7 @@ This exercise involves retrieving data from multiple elements and showing result
 
 ## Exercise 3: HK salary tax calculator
 
-> calculate how much tax should you pay
+> let user input annual income, then calculate how much tax should be paid
 
 Including both progressive rate and standard rate in the calculate.
 
@@ -30,7 +30,7 @@ Reference: https://en.wikipedia.org/wiki/Salaries_tax
 
 ## Exercise 4a: Hello My Friend
 
-> list out your friends and say hello to them
+> list out your friends' name in an array, then create a button for each of them, and say hello to them after clicked
 
 This exercise helps you revise looping array and create clickable elements for each item.
 
@@ -38,7 +38,7 @@ This exercise helps you revise looping array and create clickable elements for e
 
 ## Exercise 4b: Friend Book with Bio
 
-> create a bio for your friends
+> list out your friends' name and bio in an array of objects, this time their bio should be shown after clicked
 
 This exercise helps you revise using array of object to express more aspect of data in each item.
 
@@ -46,8 +46,8 @@ This exercise helps you revise using array of object to express more aspect of d
 
 ## Exercise 5: Editable Friend Book
 
-> add more new friends
+> let user input their friend's name and bio, then create clickable item like previous exercise.
 
-This exercise helps you revise collecting information from user, and creating (new) interactive elements.
+This exercise helps you revise collecting information from user (via input fields), and creating (new) interactive elements.
 
 [solution](./exercise5.html)
