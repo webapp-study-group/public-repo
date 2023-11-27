@@ -1,4 +1,4 @@
-# 第四課：HTML/CSS/JS 複習
+# 第四回：HTML/CSS/JS 小練習
 
 [English Version](./README.md)
 

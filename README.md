@@ -66,6 +66,6 @@ routing files: [routes.tsx](./session-3/server/app/routes.tsx)
 
 > Exercise with HTML/CSS/JS
 
-在 session 4 有兩位新朋友加入，我們用一連續小練習重溫 HTML 和 JS。
+在 session 4 有兩位新朋友加入，我們用五個小練習重溫 HTML 和 JS。
 
 [Exercise List](./session-4/README.md) | [小練習目錄](./session-4/README-zh-hk.md)
