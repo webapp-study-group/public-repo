@@ -61,3 +61,11 @@ routing files: [routes.tsx](./session-3/server/app/routes.tsx)
 螢幕截圖:
 
 ![螢幕截圖](./session-3/screenshot.webp)
+
+### Session 4
+
+> Exercise with HTML/CSS/JS
+
+在 session 4 有兩位新朋友加入，我們用一連續小練習重溫 HTML 和 JS。
+
+[Exercise List](./session-4/README.md) | [小練習目錄](./session-4/README-zh-hk.md)

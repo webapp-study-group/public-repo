@@ -1,10 +1,12 @@
 # Session 4: Revise HTML/CSS/JS
 
+[香港中文版本](./README-zh-hk.md)
+
 ## Exercise 1: A simple counter
 
 > click the button to increase the counter value
 
-This Exercise helps you revise DOM event handling and updating textContent.
+This exercise helps you revise DOM event handling and updating textContent.
 
 [solution](./exercise1.html)
 
