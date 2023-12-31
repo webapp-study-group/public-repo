@@ -74,6 +74,15 @@ routing files: [routes.tsx](./session-3/server/app/routes.tsx)
 
 > 一個逐步演示的示範，透過螢幕錄製展示了如何進行這些開發的步驟和方法。
 
+示範了的 topics：
+
+- web scraping with [Playwright](https://github.com/microsoft/playwright)
+- SQLite3 database
+- Database Migration with [Knex](https://github.com/knex/knex)
+- Cross-site scripting (XSS) Attack (跨網站指令碼安全漏洞攻擊)
+- JSX with [ts-liveview](https://github.com/beenotung/ts-liveview)
+- commonjs vs ESModule
+
 詳細請看：[domestic-helper-hub 的 repository](https://github.com/webapp-study-group/domestic-helper-hub)
 
 ### Session 5
