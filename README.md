@@ -81,7 +81,7 @@ routing files: [routes.tsx](./session-3/server/app/routes.tsx)
 - Database Migration with [Knex](https://github.com/knex/knex)
 - Cross-site scripting (XSS) Attack (跨網站指令碼安全漏洞攻擊)
 - JSX with [ts-liveview](https://github.com/beenotung/ts-liveview)
-- commonjs vs ESModule
+- commonjs vs ESModule and using them together
 
 詳細請看：[domestic-helper-hub 的 repository](https://github.com/webapp-study-group/domestic-helper-hub)
 
