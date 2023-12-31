@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Food Menus</h1>
+    <div id="menuList"></div>
+    <script>
+      let foodMenus = [
+        { id: '1', name: 'Apple' },
+        { id: '2', name: 'Banana' },
+        { id: '3', name: '<b>O</b>' },
+      ]
+
+      let html = ''
+      foodMenus.forEach(menu => {
+        html += /* html */ `
+<div class="food-menu">
+  <div>${menu.name}</div>
+  <button class="add-to-cart" data-menu-id="${menu.id}">Add to Cart</button>
+</div>
+`
+      })
+      menuList.innerHTML = html
+
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+          let menuId = button.dataset.menuId
+          console.log('add to cart', { menuId })
+        })
+      })
+    </script>
+  </body>
+</html>

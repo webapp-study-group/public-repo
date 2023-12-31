@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar" data-template="navbar.html"></nav>
+    <h1>Food Menus</h1>
+    <div id="menuList" data-template="food-menu" data-bind="foodMenus"></div>
+    <div id="footer" data-template="footer.html"></div>
+
+    <template data-name="food-menu">
+      <div class="food-menu">
+        <div data-text="name"></div>
+        <div>count: <span class="count">1</span></div>
+        <div>
+          <img class="food-menu-icon" data-src="icon" />
+        </div>
+        <button data-onclick="addToCart">Add to Cart</button>
+      </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/data-template@1.10/base.js"></script>
+    <script>
+      // renderTemplate(navbar)
+      // renderTemplate(footer)
+      scanTemplates()
+
+      // fetch('/food-menus.json')
+      //   .then(res => res.json())
+      //   .then(foodMenus => {
+      //     for (let menu of foodMenus) {
+      //       menu.addToCart = () => {
+      //         addToCart(menu)
+      //       }
+      //     }
+      //     renderTemplate(menuList, { foodMenus })
+      //   })
+
+      getJSON('/food-menus.json', foodMenus => {
+        for (let menu of foodMenus) {
+          menu.addToCart = event => {
+            let node = event.target.closest('.food-menu')
+            addToCart(node, menu)
+          }
+        }
+        renderTemplate(menuList, { foodMenus })
+      })
+
+      // let nodeTemplate = document.querySelector('.food-menu')
+      // nodeTemplate.remove()
+
+      // foodMenus.forEach(menu => {
+      //   let node = nodeTemplate.cloneNode(true)
+      //   node.querySelector('.food-name').textContent = menu.name
+      //   node
+      //     .querySelector('.add-to-cart')
+      //     .addEventListener('click', () => addToCart(menu))
+      //   menuList.appendChild(node)
+      // })
+
+      function addToCart(node, menu) {
+        console.log('add to cart, menu:', menu)
+        console.log('node:', node)
+        node.querySelector('.count').textContent++
+      }
+    </script>
+  </body>
+</html>

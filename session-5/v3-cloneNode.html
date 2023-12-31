@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Food Menus</h1>
+    <div id="menuList"></div>
+    <div class="food-menu">
+      <div class="food-name">xxx</div>
+      <div>
+        <img class="food-menu-icon" data-src="icon" />
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <script>
+      let foodMenus = [
+        {
+          id: '1',
+          name: 'Apple',
+          icon: 'https://picsum.photos/seed/1/64/64',
+        },
+        {
+          id: '2',
+          name: 'Banana',
+          icon: 'https://picsum.photos/seed/2/64/64',
+        },
+      ]
+
+      let nodeTemplate = document.querySelector('.food-menu')
+      nodeTemplate.remove()
+
+      foodMenus.forEach(menu => {
+        let node = nodeTemplate.cloneNode(true)
+        node.querySelector('.food-name').textContent = menu.name
+        node.querySelector('[data-src="icon"]').src = menu.icon
+        node
+          .querySelector('.add-to-cart')
+          .addEventListener('click', () => addToCart(menu))
+        menuList.appendChild(node)
+      })
+
+      function addToCart(menu) {
+        console.log('add to cart:', { menu })
+      }
+    </script>
+  </body>
+</html>

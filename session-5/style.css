@@ -1,0 +1,9 @@
+.food-menu {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.food-menu-icon {
+  width: 64px;
+  height: 64px;
+}

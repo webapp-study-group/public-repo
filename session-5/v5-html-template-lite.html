@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Food Menus</h1>
+    <div id="menuList"></div>
+
+    <script type="module">
+      import { render } from 'https://cdn.jsdelivr.net/npm/html-template-lite@1/dist/esm/index.js'
+
+      let foodMenus = [
+        {
+          id: '1',
+          icon: 'https://picsum.photos/seed/1/64/64',
+          name: 'Apple',
+        },
+        {
+          id: '2',
+          icon: 'https://picsum.photos/seed/2/64/64',
+          name: 'Banana',
+        },
+        {
+          id: '3',
+          icon: 'https://picsum.photos/seed/3/64/64',
+          name: '<b>O</b>',
+        },
+      ]
+
+      let html = ''
+      foodMenus.forEach(menu => {
+        html += render(
+          /* html */ `
+<div class="food-menu">
+  <div>{name}</div>
+  <div>
+    <img class="food-menu-icon" src={icon}>
+  </div>
+  <button class="add-to-cart" onclick="addToCart({id})">Add to Cart</button>
+</div>
+`,
+          menu,
+        )
+      })
+      menuList.innerHTML = html
+
+      // function addToCart(menuId) {
+      //   console.log('add to cart', { menuId })
+      // }
+      // window.addToCart = addToCart
+    </script>
+    <script>
+      function addToCart(menuId) {
+        console.log('add to cart', { menuId })
+      }
+    </script>
+  </body>
+</html>

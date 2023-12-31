@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Apple",
+    "icon": "https://picsum.photos/seed/1/64/64"
+  },
+  {
+    "id": "2",
+    "name": "Banana",
+    "icon": "https://picsum.photos/seed/2/64/64"
+  },
+  {
+    "id": "3",
+    "name": "<b>O</b>",
+    "icon": "https://picsum.photos/seed/3/64/64"
+  }
+]

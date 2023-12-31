@@ -69,3 +69,17 @@ routing files: [routes.tsx](./session-3/server/app/routes.tsx)
 在 session 4 有兩位新朋友加入，我們用五個小練習重溫 HTML 和 JS。
 
 [Exercise List](./session-4/README.md) | [小練習目錄](./session-4/README-zh-hk.md)
+
+### 假期號外：網頁資料爬取、數據庫使用和網頁應用程式開發
+
+> 一個逐步演示的示範，透過螢幕錄製展示了如何進行這些開發的步驟和方法。
+
+詳細請看：[domestic-helper-hub 的 repository](https://github.com/webapp-study-group/domestic-helper-hub)
+
+### Session 5
+
+> 重溫 Javascript DOM API 和介紹方便的 library
+
+在假期號外尾聲，我們 troubleshoot 了學員的 frontend 練習，並對 Javascript DOM API 溫故知新
+
+詳細請看：[session-5/README.md](./session-5/README.md)
